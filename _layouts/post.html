@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="post">
+  <h1>{{ page.title }}</h1>
+  <p class="meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+    {% if page.categories.first %}<span class="tag">{{ page.categories.first }}</span>{% endif %}
+    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+  </p>
+  {{ content }}
+  {% if page.ai_assisted %}
+  <p class="ai-note">AI의 도움을 받아 조사하고 초안을 쓴 뒤, 직접 확인하고 고쳐서 올린 글입니다.</p>
+  {% endif %}
+</article>

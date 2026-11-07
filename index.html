@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% if site.posts.size > 0 %}
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <div class="post-meta">
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time>
+      {% if post.categories.first %}<span class="tag">{{ post.categories.first }}</span>{% endif %}
+    </div>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">아직 글이 없습니다.</p>
+{% endif %}
