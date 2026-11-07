@@ -2,7 +2,6 @@
 title: "S3 Tables, Hive 테이블을 Iceberg로 옮겨 주는 관리형 이전 기능 공개"
 date: 2026-11-08 01:00:00 +0900
 description: "AWS가 S3 Tables에 Apache Hive 테이블을 Apache Iceberg 테이블로 옮겨 주는 관리형 이전 기능을 추가했습니다. 이전 순서와 CLI 사용법, 지원 범위를 정리합니다."
-categories: [소식]
 tags: [AWS, S3, Iceberg, 데이터엔지니어링]
 ai_assisted: true
 ---
@@ -19,7 +18,7 @@ ai_assisted: true
 - 옮긴 테이블은 Amazon Athena 등 Iceberg를 지원하는 도구에서 바로 조회할 수 있습니다.
 </div>
 
-{% include why.html q="그런데 왜 굳이 Iceberg로 옮길까?" a="AWS에 따르면 Iceberg는 데이터 레이크에 트랜잭션(ACID), 스키마 변경, 과거 시점 조회(time travel)를 더해 줍니다. 기존 Hive 테이블에서 이런 기능을 쓰려면 먼저 테이블을 Iceberg 형식으로 바꿔야 합니다." %}
+{% include why.html q="왜 굳이 Iceberg로 옮길까?" a="AWS에 따르면 Iceberg는 데이터 레이크에 트랜잭션(ACID), 스키마 변경, 과거 시점 조회(time travel)를 더해 줍니다. 기존 Hive 테이블에서 이런 기능을 쓰려면 먼저 테이블을 Iceberg 형식으로 바꿔야 합니다." %}
 
 ## 1. Iceberg 테이블이 주는 기능
 

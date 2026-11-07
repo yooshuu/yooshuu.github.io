@@ -1,15 +1,24 @@
 ---
 layout: default
 ---
-<article class="post">
-  <h1>{{ page.title }}</h1>
-  <p class="meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
-    {% if page.categories.first %}<span class="tag">{{ page.categories.first }}</span>{% endif %}
-    {% for tag in page.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
-  </p>
-  {{ content }}
-  {% if page.ai_assisted %}
-  <p class="ai-note">AI의 도움을 받아 조사하고 초안을 쓴 뒤, 직접 확인하고 고쳐서 올린 글입니다.</p>
-  {% endif %}
-</article>
+<a class="back-link" href="{{ '/' | relative_url }}">← 글 목록</a>
+<div class="post-layout">
+  <article class="post">
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y.%m.%d" }}</time>
+      {% for tag in page.tags %}<a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify }}">{{ tag }}</a>{% endfor %}
+    </p>
+    {{ content }}
+    {% if page.ai_assisted %}
+    <p class="ai-note">AI의 도움을 받아 조사하고 초안을 쓴 뒤, 직접 확인하고 고쳐서 올린 글입니다.</p>
+    {% endif %}
+  </article>
+  <aside class="toc" aria-label="목차" hidden>
+    <nav class="toc-inner">
+      <p class="toc-title">목차</p>
+      <ol class="toc-list"></ol>
+    </nav>
+  </aside>
+</div>
+<script src="{{ '/assets/js/toc.js' | relative_url }}" defer></script>

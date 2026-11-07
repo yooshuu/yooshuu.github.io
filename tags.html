@@ -1,0 +1,33 @@
+---
+layout: default
+title: "Tag List"
+permalink: /tags/
+---
+<a class="back-link" href="{{ '/' | relative_url }}">← 글 목록</a>
+<h1 class="page-title">Tag List</h1>
+<p class="page-lead">글에 붙인 태그로 자동으로 만들어집니다.</p>
+
+{% assign tags = site.tags | sort %}
+{% if tags.size > 0 %}
+<nav class="category-nav" aria-label="태그 목록">
+  {% for tag in tags %}
+  <a href="#{{ tag[0] | slugify }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+  {% endfor %}
+</nav>
+
+{% for tag in tags %}
+<section class="category-section" id="{{ tag[0] | slugify }}">
+  <h2>{{ tag[0] }}</h2>
+  <ul class="post-list">
+    {% for post in tag[1] %}
+    <li>
+      <div class="post-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y.%m.%d" }}</time></div>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">아직 글이 없습니다.</p>
+{% endif %}

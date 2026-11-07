@@ -2,7 +2,6 @@
 title: "Siri AI 개발자 프리뷰: 내 앱 기능을 Siri의 도구로 여는 법"
 date: 2026-11-04 09:00:00 +0900
 description: "Apple이 Siri AI 개발자 프리뷰를 공개했습니다. App Intents로 앱의 고유 기능을 연결하는 방법과 아직 출시할 수 없는 이유를 정리합니다."
-categories: [소식]
 tags: [AI, Apple, Siri, AppIntents]
 ai_assisted: true
 ---

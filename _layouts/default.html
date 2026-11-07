@@ -5,16 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% seo %}
   {% feed_meta %}
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
-    <a class="site-feed" href="{{ '/feed.xml' | relative_url }}">RSS</a>
-  </header>
   <main>
     {{ content }}
   </main>
-  <footer class="site-footer">{{ site.description }}</footer>
+  <footer class="site-footer">
+    <span>© {{ site.time | date: '%Y' }} {{ site.author.name }}</span>
+    <span aria-hidden="true">·</span>
+    <a href="https://github.com/yooshuu">GitHub</a>
+  </footer>
 </body>
 </html>

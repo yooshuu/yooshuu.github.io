@@ -1,6 +1,6 @@
 # yooshuu 기술 블로그
 
-새로 올라온 기술 소식과 달라진 점을 공식 자료로 정리하는 블로그입니다.
+변화하는 기술의 흐름과 실습 너머 '왜'라는 본질을 기록합니다.
 
 블로그: <https://yooshuu.github.io>
 
@@ -20,6 +20,7 @@
 - **GitHub Actions** 파이프라인을 통한 빌드·배포 자동화
 - **Markdown**과 Git 기반의 콘텐츠 작성 및 버전 관리
 - 콘텐츠 가독성에 집중한 1열 구조의 반응형 레이아웃
+- 글 오른쪽 목차와 태그로 자동 생성되는 Tag List
 - `sitemap.xml`과 RSS 피드 자동 생성
 
 ## 주요 파일과 디렉터리
@@ -36,9 +37,11 @@
 ├── _template-news.md         # 소식 글 템플릿
 ├── assets/
 │   ├── css/style.css         # 전체 디자인
+│   ├── js/toc.js             # 글 오른쪽 목차
 │   └── images/goat.webp      # 염소 캐릭터
 ├── docs/news-guide.md        # 소식 글 작성 기준
 ├── index.html                # 글 목록 첫 화면
+├── tags.html                 # 태그로 자동 생성되는 Tag List
 ├── 404.html                  # 없는 페이지 안내
 ├── Gemfile                   # Jekyll과 플러그인 목록
 └── .github/workflows/        # 자동 배포

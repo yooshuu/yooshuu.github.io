@@ -2,8 +2,7 @@
 title: "내용이 드러나는 제목"
 date: 2026-01-01 09:00:00 +0900
 description: "목록에 보일 한두 문장 요약"
-categories: [소식]
-tags: [태그]
+tags: [태그] # Tag List에 자동으로 표시됩니다
 ai_assisted: true # 혼자 쓴 글이면 이 줄을 지웁니다
 ---
 
