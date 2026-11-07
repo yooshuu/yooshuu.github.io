@@ -1,6 +1,6 @@
 ---
 title: "S3 Tables, Hive 테이블을 Iceberg로 옮겨 주는 관리형 이전 기능 공개"
-date: 2026-11-09 09:00:00 +0900
+date: 2026-11-08 01:00:00 +0900
 description: "AWS가 S3 Tables에 Apache Hive 테이블을 Apache Iceberg 테이블로 옮겨 주는 관리형 이전 기능을 추가했습니다. 이전 순서와 CLI 사용법, 지원 범위를 정리합니다."
 categories: [소식]
 tags: [AWS, S3, Iceberg, 데이터엔지니어링]
