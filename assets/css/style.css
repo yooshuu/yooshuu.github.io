@@ -45,8 +45,9 @@ a { color: var(--accent); }
 }
 .site-title a { color: var(--text); text-decoration: none; }
 .site-title .note { color: var(--accent); }
-.cover-quote { margin: 14px 0 0; color: var(--muted); font-size: 13px; word-break: normal; line-break: strict; }
-.cover-about { margin: 8px 0 0; font-size: 16px; }
+.cover-quote { margin: 16px 0 0; color: var(--muted); word-break: normal; line-break: strict; }
+.cover-quote .quote-ja { display: block; font-size: 14px; line-height: 1.5; }
+.cover-quote .quote-ko { display: block; margin-top: 4px; font-size: 14px; }
 .section-label { margin: 0 0 4px; color: var(--muted); font-size: 13px; font-weight: 700; letter-spacing: 0.04em; }
 .back-link { display: inline-block; margin: 0 0 20px; color: var(--muted); font-size: 14px; text-decoration: none; }
 .back-link:hover { color: var(--accent); }
